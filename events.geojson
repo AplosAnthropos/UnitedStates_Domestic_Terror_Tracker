@@ -1,0 +1,29 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.0369, 38.9072]
+      },
+      "properties": {
+        "event_title": "Washington DC Example Attack",
+        "event_type": "attack",
+        "summary": "Example event used to test mapping system."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.0060, 40.7128]
+      },
+      "properties": {
+        "event_title": "New York Rally Example",
+        "event_type": "rally",
+        "summary": "Example rally event used for testing visualization."
+      }
+    }
+  ]
+}

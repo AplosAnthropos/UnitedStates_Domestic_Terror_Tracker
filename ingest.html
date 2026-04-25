@@ -1,62 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>OSINT Event Ingest Tool</title>
+  <title>Event Ingest Tool</title>
   <meta charset="utf-8">
   <style>
-    body { font-family: Arial; padding: 20px; max-width: 900px; }
-    textarea { width: 100%; height: 200px; }
-    pre { background: #f4f4f4; padding: 10px; }
-    button { padding: 10px; margin-top: 10px; }
+    body { font-family: Arial; max-width: 900px; margin: 20px auto; }
+    textarea { width: 100%; height: 220px; }
+    pre { background: #f4f4f4; padding: 12px; white-space: pre-wrap; }
+    button { padding: 10px; margin-top: 10px; cursor: pointer; }
   </style>
 </head>
-
 <body>
 
-<h2>News → GeoJSON Converter (Manual Verified Mode)</h2>
+<h2>News → Structured Event Converter (Manual Verified OSINT)</h2>
 
-<p>Paste article text below:</p>
+<p>Paste a news article or report below:</p>
 
 <textarea id="input"></textarea>
 
-<br>
-<button onclick="convert()">Convert to GeoJSON Template</button>
+<button onclick="convert()">Generate Event Template</button>
 
-<h3>Output:</h3>
+<h3>Output JSON:</h3>
 <pre id="output"></pre>
 
 <script>
 function convert() {
 
-  let text = document.getElementById("input").value;
+  const text = document.getElementById("input").value;
 
-  // This is a TEMPLATE generator (NOT fake intelligence)
-  // You will manually verify and fill details.
-
-  let result = {
+  const event = {
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: ["LONGITUDE_HERE", "LATITUDE_HERE"]
+      coordinates: ["LONGITUDE", "LATITUDE"]
     },
     properties: {
-      event_title: "FILL_FROM_ARTICLE",
-      event_type: "attack_or_rally",
+      event_title: "FILL_REQUIRED",
+      event_type: "attack | rally",
       date: "YYYY-MM-DD",
-      city: "FILL",
-      state: "FILL",
+      city: "FILL_REQUIRED",
+      state: "FILL_REQUIRED",
       casualties_killed: 0,
       casualties_wounded: 0,
       casualties_total: 0,
-      actor_type: "lone_actor_or_group",
-      group_affiliation: "FILL_IF_KNOWN",
+      actor_type: "lone_actor | group",
+      group_affiliation: "unknown or fill",
       summary: text,
-      sources: []
+      sources: [
+        {
+          name: "ADD_SOURCE_NAME",
+          url: "ADD_SOURCE_URL"
+        }
+      ],
+      verification_status: "unverified_manual_entry"
     }
   };
 
   document.getElementById("output").textContent =
-    JSON.stringify(result, null, 2);
+    JSON.stringify(event, null, 2);
 }
 </script>
 

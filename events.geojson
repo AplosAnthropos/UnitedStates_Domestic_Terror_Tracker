@@ -54,6 +54,27 @@
     "summary": "On February 19, 2026, a driver rammed a vehicle through the gate of a power substation in Boulder City, Nevada, in an incident being investigated as possible terrorism, and was later found dead from a self-inflicted gunshot wound. Authorities identified him as 23-year-old Dawson Maloney and reported finding extremist-related materials and explosive components in his possession.",
     "source": "https://www.cnn.com/2026/02/20/us/nevada-counterterrorism-incident-investigation-fbi"
   }
+},
+
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -83.39621840987907,
+      42.55473752123954
+    ]
+  },
+  "properties": {
+    "event_title": "Michigan, West Bloomfield: Temple Israel Vehicle Ramming",
+    "event_type": "attack",
+    "date_of_incident": "2026-03-12",
+    "killed": 1,
+    "wounded": 0,
+    "casualties_total": 1,
+    "summary": "On March 12, 2026, the Department of Homeland Security identified 41-year-old Ayman Mohamad Ghazali as the suspect in an attack at Temple Israel in West Bloomfield Township, Michigan. The FBI is treating the incident as a targeted act of violence against the Jewish community, and no other serious casualties were reported.",
+    "source": "https://www.theguardian.com/us-news/2026/mar/12/temple-israel-synagogue-shooter-police"
+  }
 }
   ]
 }

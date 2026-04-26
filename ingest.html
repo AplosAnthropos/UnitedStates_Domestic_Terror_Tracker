@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>OSINT Event Ingest Tool</title>
+  <title>Event Ingest Tool</title>
   <meta charset="utf-8">
   <style>
-    body { font-family: Arial; max-width: 900px; margin: 20px auto; }
-    textarea { width: 100%; height: 180px; }
-    input { width: 100%; margin: 5px 0; padding: 6px; }
-    pre { background: #f4f4f4; padding: 10px; white-space: pre-wrap; }
+    body { font-family: Arial; max-width: 800px; margin: 20px auto; }
+    textarea, input, select { width: 100%; margin: 5px 0; padding: 6px; }
+    pre { background: #f4f4f4; padding: 10px; }
     button { padding: 10px; margin-top: 10px; }
   </style>
 </head>
 
 <body>
 
-<h2>OSINT Event Builder (Verified Entry Tool)</h2>
+<h2>Add Event</h2>
 
-<p>Paste article or report:</p>
-<textarea id="text"></textarea>
+<textarea id="summary" placeholder="Summary / description"></textarea>
 
-<p>Coordinates (manual for now):</p>
+<input id="title" placeholder="Event title">
+
+<select id="type">
+  <option value="attack">Attack</option>
+  <option value="rally">Rally</option>
+</select>
+
+<input id="date" placeholder="YYYY-MM-DD">
 <input id="lon" placeholder="Longitude">
 <input id="lat" placeholder="Latitude">
 
-<p>Event Type:</p>
-<select id="type">
-  <option value="attack">attack</option>
-  <option value="rally">rally</option>
-</select>
+<input id="killed" type="number" placeholder="Killed">
+<input id="wounded" type="number" placeholder="Wounded">
 
-<p>Title:</p>
-<input id="title">
+<input id="source" placeholder="Source URL">
 
-<p>Summary:</p>
-<input id="summary">
+<button onclick="build()">Generate GeoJSON</button>
 
-<button onclick="build()">Generate GeoJSON Event</button>
-
-<h3>Output:</h3>
-<pre id="out"></pre>
+<pre id="output"></pre>
 
 <script>
 function build() {
+
+  const killed = parseInt(document.getElementById("killed").value) || 0;
+  const wounded = parseInt(document.getElementById("wounded").value) || 0;
 
   const event = {
     type: "Feature",
@@ -55,13 +55,16 @@ function build() {
     properties: {
       event_title: document.getElementById("title").value,
       event_type: document.getElementById("type").value,
+      date_of_incident: document.getElementById("date").value,
+      killed: killed,
+      wounded: wounded,
+      casualties_total: killed + wounded,
       summary: document.getElementById("summary").value,
-      raw_text: document.getElementById("text").value,
-      date: new Date().toISOString().split("T")[0]
+      source: document.getElementById("source").value
     }
   };
 
-  document.getElementById("out").textContent =
+  document.getElementById("output").textContent =
     JSON.stringify(event, null, 2);
 }
 </script>

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>OSINT Event Map</title>
+  <title>US Domestic Terror Tracker</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
   <style>
-    #map { height: 100vh; margin: 0; padding: 0; }
     body { margin: 0; }
+    #map { height: 100vh; }
   </style>
 </head>
 
@@ -21,18 +21,15 @@
 
 <script>
 
-// =========================
 // INIT MAP
-// =========================
-var map = L.map('map').setView([39.5, -98.35], 4); // US-centered default
+var map = L.map('map').setView([39.5, -98.35], 4);
 
+// BASE MAP
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-// =========================
 // LOAD EVENTS
-// =========================
 fetch('events.geojson')
   .then(res => res.json())
   .then(data => {
@@ -47,7 +44,7 @@ fetch('events.geojson')
         if (feature.properties?.event_type === "rally") color = "orange";
 
         return L.circleMarker(latlng, {
-          radius: 6,
+          radius: 7,
           fillColor: color,
           color: "#000",
           weight: 1,
@@ -56,16 +53,24 @@ fetch('events.geojson')
       },
 
       onEachFeature: function (feature, layer) {
+
         layer.bindPopup(
           "<b>" + (feature.properties?.event_title || "Event") + "</b><br>" +
-          (feature.properties?.summary || "")
+          "<b>Type:</b> " + (feature.properties?.event_type || "N/A") + "<br>" +
+          "<b>Date:</b> " + (feature.properties?.date_of_incident || "N/A") + "<br>" +
+          "<b>Killed:</b> " + (feature.properties?.killed ?? 0) + "<br>" +
+          "<b>Wounded:</b> " + (feature.properties?.wounded ?? 0) + "<br>" +
+          "<b>Total:</b> " + (feature.properties?.casualties_total ?? 0) + "<br>" +
+          "<b>Summary:</b> " + (feature.properties?.summary || "") + "<br>" +
+          "<a href='" + (feature.properties?.source || "#") + "' target='_blank'>Source</a>"
         );
+
       }
 
     }).addTo(map);
 
   })
-  .catch(err => console.log("ERROR loading events.geojson:", err));
+  .catch(err => console.log("Error loading GeoJSON:", err));
 
 </script>
 

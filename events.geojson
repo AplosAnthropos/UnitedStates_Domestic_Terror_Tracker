@@ -24,6 +24,20 @@
         "event_type": "rally",
         "summary": "Example rally event used for testing visualization."
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-97.74974764417954, 30.270327912711817]
+      },
+      "properties": {
+        "event_title": "Austin-Texas: Mass shooting at Buford's on West 6th Street",
+        "event_type": "attack",
+        "summary": "AUSTIN, Texas — Four people are dead and 13 others are injured following a mass shooting at Buford's on West 6th Street early Sunday, officials said. The suspect was fatally shot by police officers at the scene.",
+        "raw_text": "AUSTIN, Texas — Four people are dead and 13 others are injured following a mass shooting at Buford's on West 6th Street early Sunday, officials said. The suspect was fatally shot by police officers at the scene.",
+        "date": "2026-04-25"
+      }
     }
   ]
 }

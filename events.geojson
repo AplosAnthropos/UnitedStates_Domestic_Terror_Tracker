@@ -75,6 +75,27 @@
     "summary": "On March 12, 2026, the Department of Homeland Security identified 41-year-old Ayman Mohamad Ghazali as the suspect in an attack at Temple Israel in West Bloomfield Township, Michigan. The FBI is treating the incident as a targeted act of violence against the Jewish community, and no other serious casualties were reported.",
     "source": "https://www.theguardian.com/us-news/2026/mar/12/temple-israel-synagogue-shooter-police"
   }
+},
+
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      40.776288,
+      -73.943634
+    ]
+  },
+  "properties": {
+    "event_title": "New York City, New York",
+    "event_type": "attack",
+    "date_of_incident": "2026-03-08",
+    "killed": 0,
+    "wounded": 0,
+    "casualties_total": 0,
+    "summary": "March 8, 2026, an attempted bomb attack during a protest outside Mayor Zohran Mamdani's official residence investigated by the NYPD and the FBI as \"act of ISIS-inspired terrorism.\"",
+    "source": "https://www.npr.org/2026/03/09/nx-s1-5742434/explosives-new-york-zohran-mamdani-isis"
+  }
 }
   ]
 }

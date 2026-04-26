@@ -2,32 +2,20 @@
   "type": "FeatureCollection",
   "features": [
     {
-  "type": "Feature",
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      -77.01088930661176,
-      38.896850459828606
-    ]
-  },
-  "properties": {
-    "event_title": "White House correspondents’ dinner shooting",
-    "event_type": "attack",
-    "summary": "A suspect is in custody following a shooting incident at last night’s White House correspondents’ dinner.  Donald Trump and and wife Melania Trump were rushed out of the event at the Washington Hilton. The suspect was identified as Cole Tomas Allen.",
-    "raw_text": "White House correspondents’ dinner shooting",
-    "date": "2026-04-26"
-  }
-},
-    {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.0060, 40.7128]
+        "coordinates": [-77.01088930661176, 38.896850459828606]
       },
       "properties": {
-        "event_title": "New York Rally Example",
-        "event_type": "rally",
-        "summary": "Example rally event used for testing visualization."
+        "event_title": "White House correspondents’ dinner incident",
+        "event_type": "attack",
+        "date_of_incident": "2026-04-25",
+        "killed": 0,
+        "wounded": 0,
+        "casualties_total": 0,
+        "summary": "Reported security incident at the White House Correspondents’ Dinner. No casualties reported.",
+        "source": "https://www.theguardian.com/us-news/live/2026/apr/26/white-house-correspondents-dinner-shooting-latest-donald-trump-suspect-washington-hilton"
       }
     },
     {
@@ -37,11 +25,14 @@
         "coordinates": [-97.74974764417954, 30.270327912711817]
       },
       "properties": {
-        "event_title": "Austin-Texas: Mass shooting at Buford's on West 6th Street",
+        "event_title": "Austin, Texas: Mass shooting at Buford's on West 6th Street",
         "event_type": "attack",
-        "summary": "AUSTIN, Texas — Four people are dead and 13 others are injured following a mass shooting at Buford's on West 6th Street early Sunday, officials said. The suspect was fatally shot by police officers at the scene.",
-        "raw_text": "AUSTIN, Texas — Four people are dead and 13 others are injured following a mass shooting at Buford's on West 6th Street early Sunday, officials said. The suspect was fatally shot by police officers at the scene.",
-        "date": "2026-04-25"
+        "date_of_incident": "2026-03-01",
+        "killed": 4,
+        "wounded": 13,
+        "casualties_total": 17,
+        "summary": "Mass shooting in Austin resulting in multiple fatalities and injuries. Suspect was shot by police at the scene.",
+        "source": "https://www.fox7austin.com/news/austin-6th-street-shooting-bufords-announces-reopening-donation-sales"
       }
     }
   ]

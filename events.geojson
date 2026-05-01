@@ -137,6 +137,26 @@
     "summary": "January 24 2026, roughly 100 members of the Patriot Front, a white nationalist group, including its leader Thomas Rousseau, paraded along the National Mall in an anti-abortion rally carrying flags and banners while Vice President J.D. Vance spoke.",
     "source": "https://www.advocate.com/politics/patriot-front-jd-vance-dc"
   }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -113.99435542584764,
+      46.871502678081306
+    ]
+  },
+  "properties": {
+    "event_title": "Missoula, Montana: Man turns himself in after planning to kill anti-abortion doctor",
+    "event_type": "attack",
+    "date_of_incident": "2026-3-3",
+    "killed": 0,
+    "wounded": 0,
+    "casualties_total": 0,
+    "summary": "March 8 2026 Charles Felix Jones, turned himself in to the police after entering the property of an abortion doctor with a loaded weapon, only to change their mind and turn away. Jones is believed to have been invovled in other anti-abortion activities and attacks.",
+    "source": "https://montanafreepress.org/2026/03/18/what-we-know-about-the-anaconda-man-accused-of-planning-to-kill-a-montana-abortion-doctor/"
+  }
 }
   ]
 }

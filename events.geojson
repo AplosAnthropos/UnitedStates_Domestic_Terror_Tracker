@@ -117,6 +117,26 @@
     "summary": "January 17 2026 anti-Somali protest in Minneapolis organized by Jake Lang was “vastly” outnumbered by counter protesters who successfully blocked a planned Quran burning. ",
     "source": "https://www.splcenter.org/resources/hatewatch/february-2026-intelligence-project-dispatch-trends/"
   }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -77.04449004912875,
+      38.889104222650424
+    ]
+  },
+  "properties": {
+    "event_title": "Washington, DC: Patriot Front Anti-Abortion March",
+    "event_type": "rally",
+    "date_of_incident": "2026-1-24",
+    "killed": 0,
+    "wounded": 0,
+    "casualties_total": 0,
+    "summary": "January 24 2026, roughly 100 members of the Patriot Front, a white nationalist group, including its leader Thomas Rousseau, paraded along the National Mall in an anti-abortion rally carrying flags and banners while Vice President J.D. Vance spoke.",
+    "source": "https://www.advocate.com/politics/patriot-front-jd-vance-dc"
+  }
 }
   ]
 }

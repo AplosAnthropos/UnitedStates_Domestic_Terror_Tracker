@@ -157,6 +157,26 @@
     "summary": "March 8 2026 Charles Felix Jones, turned himself in to the police after entering the property of an abortion doctor with a loaded weapon, only to change their mind and turn away. Jones is believed to have been invovled in other anti-abortion activities and attacks.",
     "source": "https://montanafreepress.org/2026/03/18/what-we-know-about-the-anaconda-man-accused-of-planning-to-kill-a-montana-abortion-doctor/"
   }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -76.30589116991904,
+      36.88525633245149
+    ]
+  },
+  "properties": {
+    "event_title": "Norfolk, Virginia: Old Dominion University shooting",
+    "event_type": "attack",
+    "date_of_incident": "2026-3-12",
+    "killed": 2,
+    "wounded": 2,
+    "casualties_total": 4,
+    "summary": "On March 12, 2026, a former Army National Guard member who had spent eight years in prison for attempting to aid the Islamic State opened fire on a classroom at Virginia's Old Dominion University",
+    "source": "https://www.pbs.org/newshour/nation/rotc-students-at-old-dominion-university-killed-shooter-who-left-1-dead-2-wounded"
+  }
 }
   ]
 }

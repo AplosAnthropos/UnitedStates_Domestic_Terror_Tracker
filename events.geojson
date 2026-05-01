@@ -96,6 +96,27 @@
     "summary": "March 8, 2026, an attempted bomb attack during a protest outside Mayor Zohran Mamdani's official residence investigated by the NYPD and the FBI as \"act of ISIS-inspired terrorism.\"",
     "source": "https://www.npr.org/2026/03/09/nx-s1-5742434/explosives-new-york-zohran-mamdani-isis"
   }
+},
+
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -93.27,
+      44.98
+    ]
+  },
+  "properties": {
+    "event_title": "Minneapolis, Minnesota: Jake Lang anti-Somali Protest",
+    "event_type": "rally",
+    "date_of_incident": "2026-1-17",
+    "killed": 0,
+    "wounded": 0,
+    "casualties_total": 0,
+    "summary": "January 17 2026 anti-Somali protest in Minneapolis organized by Jake Lang was “vastly” outnumbered by counter protesters who successfully blocked a planned Quran burning. ",
+    "source": "https://www.splcenter.org/resources/hatewatch/february-2026-intelligence-project-dispatch-trends/"
+  }
 }
   ]
 }
